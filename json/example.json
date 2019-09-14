@@ -1,0 +1,30 @@
+[
+    {
+        "nama" : "ALFIN P",
+        "umur" : 30,
+        "nrp" : "083887677",
+        "lulus" : true,
+        "hobby" : [
+            "coding",
+            "gaming"
+        ],
+        "pembimbing" : {
+            "pembimbing1" : "KHALID",
+            "pembimbing2" : "WALID"
+        }
+    },
+    {
+        "nama" : "ALFIN P",
+        "umur" : 30,
+        "nrp" : "083887677",
+        "lulus" : true,
+        "hobby" : [
+            "coding",
+            "gaming"
+        ],
+        "pembimbing" : {
+            "pembimbing1" : "KHALID",
+            "pembimbing2" : "WALID"
+        }
+    }
+]
