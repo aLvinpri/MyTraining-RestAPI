@@ -6,7 +6,9 @@
         TEORI
 ****************** */
 
-/* PHP memiliki 2 method dalam mengelola data JSON
+/* 
+
+ A). PHP memiliki 2 method dalam mengelola data JSON
     1. json_encode() :
         berfungsi untuk mengubah array atau object 
         PHP menjadi data JSON agar bisa diakses orang lain/
@@ -27,7 +29,7 @@
     2. json_decode() :
         berfungsi untuk mengubah data JSON menjadi array PHP.
 
-        Cara mengakses JSON orang lain :
+        Cara mengakses JSON orang lain dengan PHP :
         1. file_get_content()
 
         contoh mengakses JSON:
@@ -44,5 +46,48 @@
 
         ***atau ubah json menjadi object
         $contents = json_decode($contents);
+
+ B). Sedangkan Javascript juga memiliki 2 method dalam
+    mengelola data JSON.
+
+    1. JSON.stringify()
+        berfungsi untuk mengubah object Javascript
+        menjadi data JSON agar bisa diakses orang lain/
+        mesin.
+        contoh :
+
+        ***Data*** 
+        var data = {
+            a => '1',
+            b => '2',
+            c => '3'
+        };
+
+        console.log(JSON.stringify(data));
+        ***Hasil***
+        {"a":"1","b":"2","c":"3"}
+
+    2. JSON.parse()
+        berfungsi untuk mengubah data JSON menjadi object
+        javascript.
+
+    Cara mengakses JSON orang lain dengan javascript :
+
+    1. AJAX :
+        - XMLHttpRequest (vanila/murni javascript)
+        - JQuery (framework javascript)
+        contoh :
+
+        a. XMLHttpRequest
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if( xhr.readystate === 4 && xhr.status === 200 ){
+                    var data = JSON.parse(this.responseText);
+                    console.log(data);
+                }
+            }
+
+            xhr.open('GET', 'data.json', true);
+            xhr.send();
 
 */
