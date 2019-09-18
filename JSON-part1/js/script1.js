@@ -1,11 +1,10 @@
-
 /*
 1). Cara merubah Object Javascript menjadi JSON dengan JSON.stringify
 
     let mahasiswa = {
-    nama: "Sandhika Galih",
+    nama: "Alfin",
     nrp: "030403023",
-    email: "sandhikagalih@unpas.ac.id"
+    email: "Alfin@bsi.ac.id"
 
     console.log(JSON.stringify(mahasiswa));
 
@@ -22,10 +21,11 @@ xhr.onreadystatechange = function () {
     xhr.open('GET', 'example.json', true);
     xhr.send();
 
-*/ }
+}
+*/
 
 // Cara merubah JSON menjadi Object Javascript dengan Jquery
 
-$.getJSON('example.json', function (data) {
+$.getJSON('js/example.json', function (data) {
     console.log(data);
 });
