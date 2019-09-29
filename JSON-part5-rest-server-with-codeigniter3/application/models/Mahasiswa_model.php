@@ -2,8 +2,18 @@
 
 class Mahasiswa_model extends CI_Model
 {
-    public function getMahasiswa()
+    public function getMahasiswa($id = null)
     {
-        return $this->db->get('mahasiswa')->return_array();
+        if($id === null){
+            return $this->db->get('mahasiswa')->return_array();
+        }else{
+            return $this->db->get_where('mahasiswa', ['id' = $id])->return_array();
+        }
+    }
+
+    public function deleteMahasiswa($id)
+    {
+        $this->db->delete('mahasiswa', ['id' => $id]);
+        return $this->db->affected_rows();
     }
 }
