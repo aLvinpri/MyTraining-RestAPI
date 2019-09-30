@@ -78,4 +78,51 @@ class Mahasiswa extends CI_Controller
 			}
 		}
 	}
+
+	public function index_post()
+	{
+		$data = [
+			'nrp' => $this->post('nrp'),
+			'nama' => $this->post('nama'),
+			'email' => $this->post('email'),
+			'jurusan' => $this->post('jurusan'),
+		];
+
+		if ($this->mahasiswa->createMahasiswa($data) > 0) {
+			$this->response([
+				'status' => true,
+				'message' => 'Added a resource'
+			], 201); // CREATED (201) being the HTTP response code
+		} else {
+			// delete not process
+			$this->response([
+				'status' => false,
+				'message' => 'Failed update a resource'
+			], 400);
+		}
+	}
+
+	public function index_put()
+	{
+		$id = $this->put('id');
+		$data = [
+			'nrp' => $this->put('nrp'),
+			'nama' => $this->put('nama'),
+			'email' => $this->put('email'),
+			'jurusan' => $this->put('jurusan'),
+		];
+
+		if ($this->mahasiswa->updateMahasiswa($data, $id) > 0) {
+			$this->response([
+				'status' => true,
+				'message' => 'Updated a resource'
+			], 201); // CREATED (201) being the HTTP response code
+		} else {
+			// delete not process
+			$this->response([
+				'status' => false,
+				'message' => 'Failed update a resource'
+			], 400);
+		}
+	}
 }
