@@ -91,3 +91,13 @@
             xhr.send();
 
 */
+
+// Vid 09 Rest Client
+
+/******************************************************
+
+    1. Masukan program ngobar 9 - web dengan codeigniter
+    2. install GuzzleHTTP
+
+
+********************************************************/
