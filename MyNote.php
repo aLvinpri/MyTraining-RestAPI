@@ -92,12 +92,11 @@
 
 */
 
-// Vid 09 Rest Client
+/* 
+    Rest Server menggunakan library chriskacerguis = https://github.com/chriskacerguis/codeigniter-restserver
+*/
 
-/******************************************************
-
-    1. Masukan program ngobar 9 - web dengan codeigniter
-    2. install GuzzleHTTP
-
-
-********************************************************/
+/*
+    Rest Client menggunakan GuzzlePHP = http://docs.guzzlephp.org/en/stable/
+    install dengan composer require guzzlehttp/guzzle:~6.0
+*/

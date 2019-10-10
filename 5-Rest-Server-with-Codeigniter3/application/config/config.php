@@ -23,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:82/RestAPI/JSON-part6-rest-client-with-codeigniter3/';
+$config['base_url'] = 'http://localhost:82/RestAPI/5-Rest-Server-with-Codeigniter3/';
 
 /*
 |--------------------------------------------------------------------------
@@ -136,9 +136,7 @@ $config['subclass_prefix'] = 'MY_';
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
 */
-$config['composer_autoload'] = FCPATH . 'vendor/autoload.php';
-//var_dump(FCPATH);
-//die;
+$config['composer_autoload'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------

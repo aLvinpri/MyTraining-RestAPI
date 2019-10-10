@@ -10,7 +10,7 @@ class Mahasiswa_model extends CI_model
   public function __construct()
   {
     $this->_client = new Client([
-      'base_uri' => 'http://localhost:82/RestAPI/JSON-part5-rest-server-with-codeigniter3/api/',
+      'base_uri' => 'http://localhost:82/RestAPI/5-Rest-Server-with-Codeigniter3/api/',
       'auth' => ['admin', '1234']
     ]);
   }
