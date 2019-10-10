@@ -27,7 +27,7 @@ class Mahasiswa extends CI_Controller
 
 		// Configure limits on our controller methods
 		// Ensure you have created the 'limits' table and enabled 'limits' within application/config/rest.php
-		$this->methods['index_get']['limit'] = 10;
+		$this->methods['index_get']['limit'] = 100;
 	}
 
 	public function index_get()

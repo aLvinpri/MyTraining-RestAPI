@@ -13,7 +13,6 @@ class Mahasiswa_model extends CI_model
             'base_uri' => 'http://localhost:82/RestAPI/JSON-part5-rest-server-with-codeigniter3/api/',
             'auth' => ['admin', '1234']
         ]);
-
     }
 
     public function getAllMahasiswa()
@@ -21,7 +20,7 @@ class Mahasiswa_model extends CI_model
         //$client = new Client();
 
         $response = $this->_client->request('GET', 'mahasiswa', [
-        'query' => ['RestApiKey' => 'keyapi123']
+            'query' => ['RestApiKey' => 'keyapi123']
         ]);
 
         $result = json_decode($response->getBody()->getContents(), true);
@@ -33,9 +32,9 @@ class Mahasiswa_model extends CI_model
         //$client = new Client();
 
         $response = $client->request('GET', 'mahasiswa', [
-        'query' => [
-            'RestApiKey' => 'keyapi123',
-            'id' => $id
+            'query' => [
+                'RestApiKey' => 'keyapi123',
+                'id' => $id
             ]
         ]);
 
@@ -46,15 +45,15 @@ class Mahasiswa_model extends CI_model
     public function tambahDataMahasiswa()
     {
         $data = [
-        "nama" => $this->input->post('nama', true),
-        "nrp" => $this->input->post('nrp', true),
-        "email" => $this->input->post('email', true),
-        "jurusan" => $this->input->post('jurusan', true),
-        'RestApiKey' => 'keyapi123'
-        ];  
+            "nama" => $this->input->post('nama', true),
+            "nrp" => $this->input->post('nrp', true),
+            "email" => $this->input->post('email', true),
+            "jurusan" => $this->input->post('jurusan', true),
+            'RestApiKey' => 'keyapi123'
+        ];
 
         $response = $this->_client->request('POST', 'mahasiswa', [
-        'form_params' => $data
+            'form_params' => $data
         ]);
 
         $result = json_decode($response->getBody()->getContents(), true);
@@ -64,9 +63,9 @@ class Mahasiswa_model extends CI_model
     public function hapusDataMahasiswa($id)
     {
         $response = $this->_client->request('DELETE', 'mahasiswa', [
-        'form_params' => [
-            'RestApiKey' => 'keyapi123',
-            'id' => $id
+            'form_params' => [
+                'RestApiKey' => 'keyapi123',
+                'id' => $id
             ]
         ]);
 
@@ -77,16 +76,16 @@ class Mahasiswa_model extends CI_model
     public function ubahDataMahasiswa()
     {
         $data = [
-        "nama" => $this->input->post('nama', true),
-        "nrp" => $this->input->post('nrp', true),
-        "email" => $this->input->post('email', true),
-        "jurusan" => $this->input->post('jurusan', true),
-        "id" => $this->input->post('id', true),
-        'RestApiKey' => 'keyapi123'
-        ];  
+            "nama" => $this->input->post('nama', true),
+            "nrp" => $this->input->post('nrp', true),
+            "email" => $this->input->post('email', true),
+            "jurusan" => $this->input->post('jurusan', true),
+            "id" => $this->input->post('id', true),
+            'RestApiKey' => 'keyapi123'
+        ];
 
         $response = $this->_client->request('PUT', 'mahasiswa', [
-        'form_params' => $data
+            'form_params' => $data
         ]);
 
         $result = json_decode($response->getBody()->getContents(), true);

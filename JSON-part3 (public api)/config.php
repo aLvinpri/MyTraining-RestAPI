@@ -137,8 +137,8 @@ $config['subclass_prefix'] = 'MY_';
 |	autoloading (application/config/autoload.php)
 */
 $config['composer_autoload'] = FCPATH . 'vendor/autoload.php';
-        //var_dump(FCPATH);
-        //die;
+//var_dump(FCPATH);
+//die;
 
 /*
 |--------------------------------------------------------------------------
